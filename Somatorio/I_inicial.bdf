@@ -1,0 +1,139 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(output)
+	(rect 584 144 760 160)
+	(text "OUTPUT" (rect 1 0 39 17)(font "Arial" (font_size 6)))
+	(text "y[3..0]" (rect 90 0 119 17)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 264 288 296 320)
+	(text "GND" (rect 8 16 28 33)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 21 19 38)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 17)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 17)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
+	(rect 344 288 376 304)
+	(text "VCC" (rect 7 0 24 17)(font "Arial" (font_size 6)))
+	(text "inst2" (rect 3 5 25 22)(font "Intel Clear" )(invisible))
+	(port
+		(pt 16 16)
+		(output)
+		(text "1" (rect 19 7 24 24)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 19 7 24 24)(font "Courier New" (bold))(invisible))
+		(line (pt 16 16)(pt 16 8))
+	)
+	(drawing
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(connector
+	(pt 360 304)
+	(pt 360 320)
+)
+(connector
+	(pt 312 320)
+	(pt 360 320)
+)
+(connector
+	(pt 584 152)
+	(pt 312 152)
+	(bus)
+)
+(connector
+	(text "y[0]" (rect 296 294 313 312)(font "Intel Clear" )(vertical))
+	(pt 312 152)
+	(pt 312 320)
+)
+(connector
+	(pt 280 288)
+	(pt 280 272)
+)
+(connector
+	(pt 192 272)
+	(pt 232 272)
+)
+(connector
+	(pt 232 272)
+	(pt 256 272)
+)
+(connector
+	(pt 256 272)
+	(pt 280 272)
+)
+(connector
+	(pt 312 152)
+	(pt 256 152)
+	(bus)
+)
+(connector
+	(pt 256 152)
+	(pt 232 152)
+	(bus)
+)
+(connector
+	(pt 232 152)
+	(pt 192 152)
+	(bus)
+)
+(connector
+	(text "y[1]" (rect 176 246 193 264)(font "Intel Clear" )(vertical))
+	(pt 192 152)
+	(pt 192 272)
+)
+(connector
+	(text "y[2]" (rect 216 246 233 264)(font "Intel Clear" )(vertical))
+	(pt 232 272)
+	(pt 232 152)
+)
+(connector
+	(text "y[3]" (rect 240 246 257 264)(font "Intel Clear" )(vertical))
+	(pt 256 272)
+	(pt 256 152)
+)
+(junction (pt 312 152))
+(junction (pt 232 272))
+(junction (pt 232 152))
+(junction (pt 256 272))
+(junction (pt 256 152))

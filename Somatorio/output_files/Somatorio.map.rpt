@@ -1,0 +1,398 @@
+Analysis & Synthesis report for Somatorio
+Thu Oct 19 22:55:02 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct 19 22:55:01 2023       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Somatorio                                   ;
+; Top-level Entity Name           ; Somatorio                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 21                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Somatorio          ; Somatorio          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+; Somatorio.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Somatorio.bdf                         ;         ;
+; Adder_1bit.bdf                   ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Adder_1bit.bdf                        ;         ;
+; Overflow.bdf                     ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Overflow.bdf                          ;         ;
+; Adder.bdf                        ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Adder.bdf                             ;         ;
+; Comparator_1bit.bdf              ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Comparator_1bit.bdf                   ;         ;
+; GT.bdf                           ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/GT.bdf                                ;         ;
+; LTE.bdf                          ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/LTE.bdf                               ;         ;
+; Controle.bdf                     ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Controle.bdf                          ;         ;
+; binary2BDC.bdf                   ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/binary2BDC.bdf                        ;         ;
+; BDCto7segments.bdf               ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/BDCto7segments.bdf                    ;         ;
+; display.bdf                      ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/display.bdf                           ;         ;
+; Resultado.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Resultado.bdf                         ;         ;
+; I.bdf                            ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/I.bdf                                 ;         ;
+; Operacional.bdf                  ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Operacional.bdf                       ;         ;
+; Result_Inicial.bdf               ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/Result_Inicial.bdf                    ;         ;
+; I_inicial.bdf                    ; yes             ; User Block Diagram/Schematic File  ; Z:/home/saulolv/SD/Somatorio/I_inicial.bdf                         ;         ;
+; 21mux.bdf                        ; yes             ; Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/21mux.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                   ;
++---------------------------------------------+-----------------+
+; Resource                                    ; Usage           ;
++---------------------------------------------+-----------------+
+; Estimate of Logic utilization (ALMs needed) ; 0               ;
+;                                             ;                 ;
+; Combinational ALUT usage for logic          ; 0               ;
+;     -- 7 input functions                    ; 0               ;
+;     -- 6 input functions                    ; 0               ;
+;     -- 5 input functions                    ; 0               ;
+;     -- 4 input functions                    ; 0               ;
+;     -- <=3 input functions                  ; 0               ;
+;                                             ;                 ;
+; Dedicated logic registers                   ; 0               ;
+;                                             ;                 ;
+; I/O pins                                    ; 21              ;
+;                                             ;                 ;
+; Total DSP Blocks                            ; 0               ;
+;                                             ;                 ;
+; Maximum fan-out node                        ; overflow~output ;
+; Maximum fan-out                             ; 1               ;
+; Total fan-out                               ; 21              ;
+; Average fan-out                             ; 0.50            ;
++---------------------------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |Somatorio                 ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 21   ; 0            ; |Somatorio          ; Somatorio   ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------+----------------------------------------------+
+; Register name                           ; Reason for Removal                           ;
++-----------------------------------------+----------------------------------------------+
+; Operacional:inst2|Resultado:inst|inst3  ; Stuck at VCC due to stuck port data_in       ;
+; Operacional:inst2|Resultado:inst|inst22 ; Stuck at VCC due to stuck port data_in       ;
+; Operacional:inst2|Resultado:inst|inst12 ; Stuck at VCC due to stuck port data_in       ;
+; Operacional:inst2|Resultado:inst|inst4  ; Stuck at VCC due to stuck port data_in       ;
+; Operacional:inst2|I:inst14|inst4        ; Stuck at VCC due to stuck port data_in       ;
+; Operacional:inst2|I:inst14|inst2        ; Merged with Operacional:inst2|I:inst14|inst3 ;
+; Operacional:inst2|I:inst14|inst1        ; Merged with Operacional:inst2|I:inst14|inst3 ;
+; Controle:inst|inst                      ; Lost fanout                                  ;
+; Controle:inst|inst1                     ; Lost fanout                                  ;
+; Operacional:inst2|I:inst14|inst3        ; Lost fanout                                  ;
+; Total Number of Removed Registers = 10  ;                                              ;
++-----------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++----------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Register name                          ; Reason for Removal        ; Registers Removed due to This Register                                            ;
++----------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Operacional:inst2|Resultado:inst|inst3 ; Stuck at VCC              ; Operacional:inst2|Resultado:inst|inst12, Controle:inst|inst, Controle:inst|inst1, ;
+;                                        ; due to stuck port data_in ; Operacional:inst2|I:inst14|inst3                                                  ;
++----------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; boundary_port         ; 21                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Oct 19 22:53:42 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Somatorio -c Somatorio
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file somatorio.bdf
+    Info (12023): Found entity 1: Somatorio
+Info (12021): Found 1 design units, including 1 entities, in source file adder_1bit.bdf
+    Info (12023): Found entity 1: Adder_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file overflow.bdf
+    Info (12023): Found entity 1: Overflow
+Info (12021): Found 1 design units, including 1 entities, in source file adder.bdf
+    Info (12023): Found entity 1: Adder
+Info (12021): Found 1 design units, including 1 entities, in source file comparator_1bit.bdf
+    Info (12023): Found entity 1: Comparator_1bit
+Info (12021): Found 1 design units, including 1 entities, in source file gt.bdf
+    Info (12023): Found entity 1: GT
+Info (12021): Found 1 design units, including 1 entities, in source file lte.bdf
+    Info (12023): Found entity 1: LTE
+Info (12021): Found 1 design units, including 1 entities, in source file controle.bdf
+    Info (12023): Found entity 1: Controle
+Info (12021): Found 1 design units, including 1 entities, in source file binary2bdc.bdf
+    Info (12023): Found entity 1: binary2BDC
+Info (12021): Found 1 design units, including 1 entities, in source file bdcto7segments.bdf
+    Info (12023): Found entity 1: BDCto7segments
+Info (12021): Found 1 design units, including 1 entities, in source file display.bdf
+    Info (12023): Found entity 1: display
+Info (12021): Found 1 design units, including 1 entities, in source file resultado.bdf
+    Info (12023): Found entity 1: Resultado
+Info (12021): Found 1 design units, including 1 entities, in source file i.bdf
+    Info (12023): Found entity 1: I
+Info (12021): Found 1 design units, including 1 entities, in source file operacional.bdf
+    Info (12023): Found entity 1: Operacional
+Info (12021): Found 1 design units, including 1 entities, in source file bus_mux21.bdf
+    Info (12023): Found entity 1: Bus_Mux21
+Info (12021): Found 1 design units, including 1 entities, in source file result_inicial.bdf
+    Info (12023): Found entity 1: Result_Inicial
+Info (12021): Found 1 design units, including 1 entities, in source file i_inicial.bdf
+    Info (12023): Found entity 1: I_inicial
+Info (12127): Elaborating entity "Somatorio" for the top level hierarchy
+Info (12128): Elaborating entity "Operacional" for hierarchy "Operacional:inst2"
+Info (12128): Elaborating entity "LTE" for hierarchy "Operacional:inst2|LTE:inst4"
+Info (12128): Elaborating entity "GT" for hierarchy "Operacional:inst2|LTE:inst4|GT:inst"
+Info (12128): Elaborating entity "Comparator_1bit" for hierarchy "Operacional:inst2|LTE:inst4|GT:inst|Comparator_1bit:inst1"
+Info (12128): Elaborating entity "I" for hierarchy "Operacional:inst2|I:inst14"
+Info (12128): Elaborating entity "21mux" for hierarchy "Operacional:inst2|I:inst14|21mux:inst5"
+Info (12130): Elaborated megafunction instantiation "Operacional:inst2|I:inst14|21mux:inst5"
+Info (12128): Elaborating entity "I_inicial" for hierarchy "Operacional:inst2|I_inicial:inst10"
+Info (12128): Elaborating entity "Adder" for hierarchy "Operacional:inst2|Adder:inst3"
+Info (12128): Elaborating entity "Adder_1bit" for hierarchy "Operacional:inst2|Adder:inst3|Adder_1bit:inst3"
+Info (12128): Elaborating entity "Overflow" for hierarchy "Operacional:inst2|Adder:inst3|Overflow:inst5"
+Info (12128): Elaborating entity "Resultado" for hierarchy "Operacional:inst2|Resultado:inst"
+Info (12128): Elaborating entity "Result_Inicial" for hierarchy "Operacional:inst2|Result_Inicial:inst15"
+Info (12128): Elaborating entity "Controle" for hierarchy "Controle:inst"
+Info (12128): Elaborating entity "display" for hierarchy "display:inst3"
+Info (12128): Elaborating entity "BDCto7segments" for hierarchy "display:inst3|BDCto7segments:inst3"
+Info (12128): Elaborating entity "binary2BDC" for hierarchy "display:inst3|binary2BDC:inst"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "overflow" is stuck at GND
+    Warning (13410): Pin "a1" is stuck at GND
+    Warning (13410): Pin "b1" is stuck at VCC
+    Warning (13410): Pin "c1" is stuck at GND
+    Warning (13410): Pin "d1" is stuck at GND
+    Warning (13410): Pin "e1" is stuck at VCC
+    Warning (13410): Pin "f1" is stuck at GND
+    Warning (13410): Pin "g1" is stuck at GND
+    Warning (13410): Pin "a0" is stuck at VCC
+    Warning (13410): Pin "b0" is stuck at GND
+    Warning (13410): Pin "c0" is stuck at GND
+    Warning (13410): Pin "d0" is stuck at VCC
+    Warning (13410): Pin "e0" is stuck at VCC
+    Warning (13410): Pin "f0" is stuck at VCC
+    Warning (13410): Pin "g0" is stuck at VCC
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "comece"
+    Warning (15610): No output dependent on input pin "clock"
+    Warning (15610): No output dependent on input pin "N[3]"
+    Warning (15610): No output dependent on input pin "N[2]"
+    Warning (15610): No output dependent on input pin "N[1]"
+    Warning (15610): No output dependent on input pin "N[0]"
+Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 15 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 557 megabytes
+    Info: Processing ended: Thu Oct 19 22:55:02 2023
+    Info: Elapsed time: 00:01:20
+    Info: Total CPU time (on all processors): 00:00:10
+
+
